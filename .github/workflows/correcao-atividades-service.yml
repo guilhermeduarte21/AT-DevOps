@@ -14,9 +14,12 @@ on:
 
 jobs:
   build:
-
     runs-on: windows-latest
 
+    defaults:
+      run:
+        working-directory: correcao-atividades-service
+        
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
