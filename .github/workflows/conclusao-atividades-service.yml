@@ -6,8 +6,12 @@ name: conclusao-atividades-service
 on:
   push:
     branches: [ main ]
+    paths:
+      - conclusao-atividades-service/**
   pull_request:
     branches: [ main ]
+    paths:
+      - conclusao-atividades-service/**
 
 jobs:
   build:

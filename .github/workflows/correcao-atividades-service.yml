@@ -6,8 +6,12 @@ name: correcao-atividades-service
 on:
   push:
     branches: [ main ]
+    paths:
+      - correcao-atividades-service/**
   pull_request:
     branches: [ main ]
+    paths:
+      - correcao-atividades-service/**
 
 jobs:
   build:

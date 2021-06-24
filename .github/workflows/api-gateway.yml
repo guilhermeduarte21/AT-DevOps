@@ -6,13 +6,17 @@ name: api-gateway
 on:
   push:
     branches: [ main ]
+    paths:
+      - api-gateway/**
   pull_request:
     branches: [ main ]
+    paths:
+      - api-gateway/**
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     strategy:
       matrix:
