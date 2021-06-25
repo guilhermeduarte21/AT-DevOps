@@ -1,29 +1,13 @@
 module.exports = {
   clearMocks: true,
   collectCoverage: true,
+  bail: true,
   coverageDirectory: "coverage",
-  coveragePathIgnorePatterns: [
-    "/node_modules/",
-    "logger.js"
-  ],
+  coveragePathIgnorePatterns: ["/node_modules/", "logger.js"],
   coverageProvider: "v8",
-  coverageReporters: [
-    "json",
-    "text",
-    "lcov",
-    "clover"
-  ],
-  moduleDirectories: [
-    "node_modules"
-  ],
-  moduleFileExtensions: [
-    "js",
-    "json",
-    "jsx",
-    "ts",
-    "tsx",
-    "node"
-  ],
+  coverageReporters: ["json", "text", "lcov", "clover"],
+  moduleDirectories: ["node_modules"],
+  moduleFileExtensions: ["js", "json", "jsx", "ts", "tsx", "node"],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -32,7 +16,7 @@ module.exports = {
   // modulePathIgnorePatterns: [],
 
   // The root directory that Jest should scan for tests and modules within
-  rootDir: '.',
+  rootDir: ".",
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
@@ -43,12 +27,7 @@ module.exports = {
   setupFiles: ["dotenv/config"],
 
   testEnvironment: "node",
-  testMatch: [
-    "**/__tests__/**/*.[jt]s?(x)",
-    "**/?(*.)+(spec|test).[tj]s?(x)"
-  ],
+  testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
 
-  testPathIgnorePatterns: [
-    "/node_modules/"
-  ]
+  testPathIgnorePatterns: ["/node_modules/"],
 };
