@@ -1,6 +1,5 @@
 const MongoClient = require("mongodb").MongoClient;
 let client = null;
-require("dotenv/config");
 
 async function connect() {
   if (client && client.isConnected()) return client.db(process.env.DATABASE);

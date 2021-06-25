@@ -12,6 +12,7 @@ const apiMock = jest.fn((app, repository) => {
 test("Server Start", async () => {
   const app = await server.start(apiMock);
   expect(app).toBeTruthy();
+  await server.stop();
 });
 
 test("Health Check", async () => {
@@ -19,6 +20,7 @@ test("Health Check", async () => {
   const app = await server.start(apiMock);
   const response = await request(app).get("/health");
   expect(response.status).toEqual(200);
+  await server.stop();
 });
 
 test("Error Check", async () => {
