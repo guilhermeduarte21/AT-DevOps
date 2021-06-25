@@ -9,7 +9,7 @@ test("Connecting Database", async () => {
 test("Disconnecting Database", async () => {
   const isDisconnected = await database.disconnect();
   expect(isDisconnected).toBeTruthy();
-});
+});require('dotenv/config');
 
 test("Disconnecting Database 2x", async () => {
   await database.disconnect();

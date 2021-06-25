@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("../../swagger_output.json");
-
+require("dotenv/config");
 let server = null;
 
 async function start(api, repository) {

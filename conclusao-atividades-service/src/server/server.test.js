@@ -1,6 +1,7 @@
 const { test, expect } = require("@jest/globals");
 const server = require("./server");
 const request = require("supertest");
+require("dotenv/config");
 
 const apiMock = jest.fn((app, repository) => {
   app.get("/error", (req, res, next) => {

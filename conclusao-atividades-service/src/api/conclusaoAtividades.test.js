@@ -3,6 +3,7 @@ const server = require("../server/server");
 const atividadeConcluida = require("./conclusaoAtividades");
 const request = require("supertest");
 const repositoryMock = require("../repository/__mocks__/repository");
+require("dotenv/config");
 
 let app = null;
 
